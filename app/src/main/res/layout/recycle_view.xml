@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="cn.rvlr.recyclerviewloadrefresh.network.RecycleBinding">
+
+        <variable
+            name="viewModel"
+            type="cn.rvlr.recyclerviewloadrefresh.network.RecycleModel" />
+        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers"></import>
+
+        <import type="android.view.View"></import>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:gravity="center"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:title=""
+                app:titleTextColor="@android:color/white">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/else_bottom"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:onRefreshListener="@{viewModel.onRefreshListener}"
+            app:refreshing="@={viewModel.refreshing}">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/else_bottom"
+                app:adapter='@{"me.tatarka.bindingcollectionadapter.BindingRecyclerViewAdapter"}'
+                app:addOnItemClick="@{viewModel.onItemClickListener}"
+                app:addOnScrollListener="@{viewModel.onScrollListener}"
+                app:itemView="@{viewModel.itemViews}"
+                app:items="@{viewModel.items}"
+                app:layoutManager="@{LayoutManagers.linear()}" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="加载中。。。。。"
+            android:textSize="30sp"
+            android:visibility="@{viewModel.statusLoading ? View.VISIBLE : View.GONE}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="出错啦。。。。。"
+            android:textSize="30sp"
+            android:visibility="@{viewModel.statusError ? View.VISIBLE : View.GONE}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:onClick="@{viewModel}"
+            android:text="网络异常,点击重新加载"
+            android:textSize="30sp"
+            android:visibility="@{viewModel.statusNetworkError ? View.VISIBLE : View.GONE}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="没有数据。。。。。"
+            android:textSize="30sp"
+            android:visibility="@{viewModel.statusEmpty ? View.VISIBLE : View.GONE}" />
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

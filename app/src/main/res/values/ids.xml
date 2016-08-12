@@ -1,0 +1,11 @@
+<resources>
+    <!--注：如果是在这里设置的id则是唯一的-->
+    <item name="item_click_support" type="id" />
+    <item name="onRefreshListener" type="id" />
+    <!--
+    在代码中引用如果是重新创建一个view对象则也可以设置id设置如下：
+    Button btn=new  Button(context);  btn .setId(context.getResources().getInteger(R.id.buttonOk));
+     如果是在xml中引用如下：
+     android:id="@id/buttonOk"-->
+    <item name="buttonOk" type="id" />
+</resources>

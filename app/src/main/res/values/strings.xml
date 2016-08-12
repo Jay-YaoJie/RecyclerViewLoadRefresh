@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RecyclerViewLoadRefresh</string>
+    <!-- 如果要引用productPrice字符串可以添加用 （http://www.cnblogs.com/bluestorm/p/3713717.html） android:text="@{@string/productPrice(viewModel.ticket.price??@string/zero)}" -->
+    <string name="productPrice">price（产品价格）:%1$s 元</string>
+    <string name="zero">0</string>
+
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="cn.rvlr.recyclerviewloadrefresh.mvvmframework.viewmodel.BaseBinding">
+
+        <variable
+            name="viewModel"
+            type="cn.rvlr.recyclerviewloadrefresh.mvvmframework.viewmodel.BaseViewModel"/>
+    </data>
+    <View/>
+</layout>
