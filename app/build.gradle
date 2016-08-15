@@ -54,6 +54,8 @@ dependencies {
     compile 'io.reactivex:rxjava:1.1.6'
     compile 'io.reactivex:rxandroid:1.2.1'
 
+    //设置打印拦截器
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.0-RC1'
 
 
     //RecyclerView列表的适配器

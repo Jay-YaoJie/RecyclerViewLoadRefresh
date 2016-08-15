@@ -6,7 +6,7 @@ import com.google.gson.GsonBuilder;
 import java.util.concurrent.TimeUnit;
 
 import cn.rvlr.recyclerviewloadrefresh.server.utils.HttpHeadInterceptor;
-import cn.rvlr.recyclerviewloadrefresh.server.utils.HttpLoggingInterceptor;
+
 
 import okhttp3.OkHttpClient;
 
@@ -20,6 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public abstract class HttpServiceGenerator {
     //请求网络时的地址
     public static final String API_BASE_URL = "http://apis.baidu.com/apistore/";
+
 
     private static final HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
     private static final HttpHeadInterceptor httpHeadInterceptor = new HttpHeadInterceptor();
