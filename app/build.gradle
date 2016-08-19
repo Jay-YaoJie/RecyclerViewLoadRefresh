@@ -33,10 +33,10 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     //testCompile 'junit:junit:4.12'  //andorid studio下的测试包
     //添加系统自带的包
-    compile 'com.android.support:appcompat-v7:23.0.1'
-    compile 'com.android.support:design:23.4.0'
-    compile 'com.android.support:support-v4:23.0.1'
-    compile 'com.android.support:recyclerview-v7:23.0.1'
+    compile 'com.android.support:appcompat-v7:23.+'
+    compile 'com.android.support:design:23.+'
+    compile 'com.android.support:support-v4:23.0.+'
+    compile 'com.android.support:recyclerview-v7:23.+'
 
 
 
@@ -54,7 +54,7 @@ dependencies {
     compile 'io.reactivex:rxjava:1.1.6'
     compile 'io.reactivex:rxandroid:1.2.1'
 
-    //设置打印拦截器
+    //设置网络数据请求时打印
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.0-RC1'
 
 

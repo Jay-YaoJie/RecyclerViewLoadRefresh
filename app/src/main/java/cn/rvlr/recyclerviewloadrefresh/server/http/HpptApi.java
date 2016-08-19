@@ -1,11 +1,12 @@
-package cn.rvlr.recyclerviewloadrefresh.server;
+package cn.rvlr.recyclerviewloadrefresh.server.http;
 
+import cn.rvlr.recyclerviewloadrefresh.server.constants.HttpResult;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 /**
- * Created by Administrator on 2016/8/10 0010.
+ * 使用
  */
 public class HpptApi extends HttpServiceGenerator {
     public interface ApiManager{

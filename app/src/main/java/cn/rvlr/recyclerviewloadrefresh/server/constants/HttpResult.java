@@ -1,4 +1,4 @@
-package cn.rvlr.recyclerviewloadrefresh.server;
+package cn.rvlr.recyclerviewloadrefresh.server.constants;
 
 /**
  * 默认约定返回 格式 ： {"status":0,"message":"提示消息","content":{}

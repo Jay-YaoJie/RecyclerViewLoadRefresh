@@ -1,4 +1,4 @@
-package cn.rvlr.recyclerviewloadrefresh.server.utils;
+package cn.rvlr.recyclerviewloadrefresh.utils;
 
 import android.util.Log;
 

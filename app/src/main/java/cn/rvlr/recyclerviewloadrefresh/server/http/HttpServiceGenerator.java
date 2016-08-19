@@ -1,15 +1,19 @@
-package cn.rvlr.recyclerviewloadrefresh.server;
+package cn.rvlr.recyclerviewloadrefresh.server.http;
 
 import com.google.gson.GsonBuilder;
 
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import cn.rvlr.recyclerviewloadrefresh.server.utils.HttpHeadInterceptor;
 
-
+import cn.rvlr.recyclerviewloadrefresh.server.constants.HttpConstants;
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 
+
+import okhttp3.Request;
+import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
@@ -43,5 +47,22 @@ public abstract class HttpServiceGenerator {
         return retrofit;
     }
 
+    /**
+     *  自动添加token 和 user-agent拦截器,//使用OkHttp拦截器可以指定需要的header给每一个Http请求
+     *
+     */
+    public static final class HttpHeadInterceptor implements Interceptor {
 
+        @Override
+        public Response intercept(Chain chain) throws IOException {
+            final Request originalRequest = chain.request();
+            final Request requestByHandle = originalRequest.newBuilder()
+                    .removeHeader(HttpConstants.USER_AGENT)
+                    .removeHeader(HttpConstants.TOKEN)
+                    .addHeader(HttpConstants.USER_AGENT, HttpConstants.USER_AGENT_VALUE)
+                    .addHeader(HttpConstants.TOKEN,"传入当前保存的token")
+                    .build();
+            return chain.proceed(requestByHandle);
+        }
+    }
 }
