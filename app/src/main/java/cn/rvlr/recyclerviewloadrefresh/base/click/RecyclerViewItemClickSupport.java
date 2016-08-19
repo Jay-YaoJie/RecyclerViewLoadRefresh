@@ -1,4 +1,4 @@
-package cn.rvlr.recyclerviewloadrefresh.mvvmframework.utils;
+package cn.rvlr.recyclerviewloadrefresh.base.click;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

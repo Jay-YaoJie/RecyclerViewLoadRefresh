@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.rvlr.recyclerviewloadrefresh.R;
-import cn.rvlr.recyclerviewloadrefresh.mvvmframework.viewmodel.BaseRecyclerViewModel;
+import cn.rvlr.recyclerviewloadrefresh.base.viewmodel.BaseRecyclerViewModel;
 
 
 /**

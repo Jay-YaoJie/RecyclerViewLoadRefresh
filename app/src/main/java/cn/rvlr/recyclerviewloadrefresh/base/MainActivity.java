@@ -1,4 +1,4 @@
-package cn.rvlr.recyclerviewloadrefresh;
+package cn.rvlr.recyclerviewloadrefresh.base;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import cn.rvlr.recyclerviewloadrefresh.R;
 import cn.rvlr.recyclerviewloadrefresh.network.RecycleBindingActivity;
 import cn.rvlr.recyclerviewloadrefresh.testrecycler.FragmentRecyclerView;
 import cn.rvlr.recyclerviewloadrefresh.MainBinding;
@@ -31,5 +32,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .replace(binding.content.getId(), fragment)
                 .commit();
+    }
+    public  void sho(View v ){
+
     }
 }

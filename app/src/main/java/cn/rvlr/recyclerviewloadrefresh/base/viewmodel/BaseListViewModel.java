@@ -1,4 +1,4 @@
-package cn.rvlr.recyclerviewloadrefresh.mvvmframework.viewmodel;
+package cn.rvlr.recyclerviewloadrefresh.base.viewmodel;
 
 import android.databinding.ObservableArrayList;
 import android.databinding.ObservableBoolean;

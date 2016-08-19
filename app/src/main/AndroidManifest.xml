@@ -11,6 +11,12 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
+
+    <!--引入的第三方库最低支持版本高于我的项目的最低支持版本,
+如果存在多个库有此异常，则用逗号分割它们，例如：<uses-sdk tools:overrideLibrary="xxx.xxx.aaa, xxx.xxx.bbb"/>-->
+   <!-- <uses-sdk tools:overrideLibrary="xxx.xx.aaa"/>-->
+
+
     <!--Android系统会将240x320的低密度（120）
 尺寸转换为中等密度（160）对应的尺寸-->
     <supports-screens
@@ -27,7 +33,7 @@
         android:supportsRtl="true"
         android:name=".AndroidApplication"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".base.MainActivity">
             <!--在fragment里添加的RecylerView-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

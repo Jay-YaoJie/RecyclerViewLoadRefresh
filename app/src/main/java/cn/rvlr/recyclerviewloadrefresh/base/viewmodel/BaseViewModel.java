@@ -1,15 +1,9 @@
-package cn.rvlr.recyclerviewloadrefresh.mvvmframework.viewmodel;
+package cn.rvlr.recyclerviewloadrefresh.base.viewmodel;
 
-import android.databinding.BaseObservable;
 import android.databinding.ObservableBoolean;
 import android.os.Bundle;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
-
-import cn.rvlr.recyclerviewloadrefresh.mvvmframework.utils.OnViewModelNotifyListener;
+import cn.rvlr.recyclerviewloadrefresh.base.click.OnViewModelNotifyListener;
 
 /**
  * 基类ViewModel

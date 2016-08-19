@@ -1,10 +1,10 @@
-package cn.rvlr.recyclerviewloadrefresh.mvvmframework.viewmodel;
+package cn.rvlr.recyclerviewloadrefresh.base.viewmodel;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import cn.rvlr.recyclerviewloadrefresh.mvvmframework.utils.RecyclerViewItemClickSupport;
+import cn.rvlr.recyclerviewloadrefresh.base.click.RecyclerViewItemClickSupport;
 
 /**
  * 针对RecyclerView的ViewModel

@@ -1,4 +1,4 @@
-package cn.rvlr.recyclerviewloadrefresh.mvvmframework.viewmodel;
+package cn.rvlr.recyclerviewloadrefresh.base.viewmodel;
 
 /**
  *View视图对象，头部/底部对象

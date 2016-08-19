@@ -1,4 +1,4 @@
-package cn.rvlr.recyclerviewloadrefresh.mvvmframework.viewmodel;
+package cn.rvlr.recyclerviewloadrefresh.base.viewmodel;
 
 import android.databinding.BindingAdapter;
 import android.databinding.InverseBindingAdapter;
@@ -8,7 +8,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 
 import cn.rvlr.recyclerviewloadrefresh.R;
-import cn.rvlr.recyclerviewloadrefresh.mvvmframework.utils.RecyclerViewItemClickSupport;
+import cn.rvlr.recyclerviewloadrefresh.base.click.RecyclerViewItemClickSupport;
 
 /**
  *如果要在在xml里调用app：则可以在这里添加要使用的事件

@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import cn.rvlr.recyclerviewloadrefresh.R;
-import cn.rvlr.recyclerviewloadrefresh.mvvmframework.utils.OnViewModelNotifyListener;
+import cn.rvlr.recyclerviewloadrefresh.base.click.OnViewModelNotifyListener;
 import cn.rvlr.recyclerviewloadrefresh.network.RecycleBinding;
 
 /**
