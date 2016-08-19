@@ -31,7 +31,7 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-
+    //testCompile 'junit:junit:4.12'  //andorid studio下的测试包
     //添加系统自带的包
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.android.support:design:23.4.0'
