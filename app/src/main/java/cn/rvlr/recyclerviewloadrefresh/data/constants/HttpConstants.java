@@ -1,4 +1,4 @@
-package cn.rvlr.recyclerviewloadrefresh.server.constants;
+package cn.rvlr.recyclerviewloadrefresh.data.constants;
 
 import android.os.Build;
 
