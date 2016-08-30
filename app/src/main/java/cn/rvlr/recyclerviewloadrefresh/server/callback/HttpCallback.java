@@ -1,6 +1,6 @@
-package cn.rvlr.recyclerviewloadrefresh.data.callback;
-import cn.rvlr.recyclerviewloadrefresh.data.constants.HttpConstants;
-import cn.rvlr.recyclerviewloadrefresh.data.constants.HttpResult;
+package cn.rvlr.recyclerviewloadrefresh.server.callback;
+import cn.rvlr.recyclerviewloadrefresh.server.constants.HttpConstants;
+import cn.rvlr.recyclerviewloadrefresh.server.constants.HttpResult;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

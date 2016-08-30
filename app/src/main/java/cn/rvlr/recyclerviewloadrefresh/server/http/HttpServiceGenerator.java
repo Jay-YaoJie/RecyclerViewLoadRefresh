@@ -1,4 +1,4 @@
-package cn.rvlr.recyclerviewloadrefresh.data.http;
+package cn.rvlr.recyclerviewloadrefresh.server.http;
 
 import com.google.gson.GsonBuilder;
 
@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 
-import cn.rvlr.recyclerviewloadrefresh.data.constants.HttpConstants;
+import cn.rvlr.recyclerviewloadrefresh.server.constants.HttpConstants;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 
