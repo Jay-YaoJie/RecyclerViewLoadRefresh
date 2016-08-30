@@ -34,7 +34,7 @@ public class FragmentRecyclerView extends Fragment {
         //点击事件如果是单独写的类对象，则先设置点击事件的类
         binding.setListeners(new Listeners(viewModel));
         //执行
-        //binding.executePendingBindings();
+        binding.executePendingBindings();
 
 
         return binding.getRoot();

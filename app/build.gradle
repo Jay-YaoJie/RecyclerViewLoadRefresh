@@ -1,35 +1,108 @@
 apply plugin: 'com.android.application'
-
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    def globalConfiguration = rootProject.extensions.getByName("ext")
 
-    dataBinding {
-        enabled = true//要使用dataBainding就必须要添加这一个
-    }
+    compileSdkVersion globalConfiguration.getAt("androidCompileSdkVersion")
+    buildToolsVersion globalConfiguration.getAt("androidBuildToolsVersion")
 
     defaultConfig {
-        applicationId "cn.rvlr.recyclerviewloadrefresh"
-        minSdkVersion 16
-        targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        multiDexEnabled true
+        minSdkVersion globalConfiguration.getAt("androidMinSdkVersion")
+        targetSdkVersion globalConfiguration.getAt("androidTargetSdkVersion")
+
+        applicationId globalConfiguration.getAt("androidApplicationId")
+        versionCode globalConfiguration.getAt("androidVersionCode")
+        versionName globalConfiguration.getAt("androidVersionName")
     }
+
+    dataBinding {
+        enabled = true//如果要使用Binding就必须添加这一个个值
+    }
+//在android下添加这个一个sourceSets.main
+    sourceSets {
+        main {
+//      java.srcDirs = ['src']
+//      resources.srcDirs = ['src']
+//      aidl.srcDirs = ['src']
+//      renderscript.srcDirs = ['src']
+//      res.srcDirs = ['res']
+//      assets.srcDirs = ['assets']
+//      jniLibs.srcDirs = ['libs']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+
+        }
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('../buildsystem/flyantsf.keystore')
+            storePassword 'flyant0909'
+            keyAlias 'flyantsf'
+            keyPassword 'flyant0909'
+//            storeFile file('../buildsystem/自己申请的密钥.keystore')
+//            storePassword '存储密码'
+//            keyAlias '自己申请的密钥'
+//            keyPassword '密钥密码'
+        }
+
+        debug {
+            storeFile file('../buildsystem/flyantsf.keystore')
+            storePassword 'flyant0909'
+            keyAlias 'flyantsf'
+            keyPassword 'flyant0909'
+        }
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled false //混淆编译
+            zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
+        debug {
+            minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources false //移除无用的资源文件
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    repositories {
+        jcenter()
+        mavenCentral()  // GPUImage for Android
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
 
-
 }
 
 dependencies {
+    def presentationDependencies = rootProject.ext.presentationDependencies
+
+//    compile presentationDependencies.retrofit
+//    compile presentationDependencies.adapterRxjava
+//    compile presentationDependencies.rxJava
+//    compile presentationDependencies.rxAndroid
+
+    //compile presentationDependencies.converterGson
+    //////compile 'com.google.code.gson:gson:2.7'
+    //  compile presentationDependencies.gson
+    ////// compile 'com.android.support:recyclerview-v7:23.1.0'
+    // compile presentationDependencies.recyclerView
+    //////compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile presentationDependencies.glide
     compile fileTree(include: ['*.jar'], dir: 'libs')
     //testCompile 'junit:junit:4.12'  //andorid studio下的测试包
     //添加系统自带的包
