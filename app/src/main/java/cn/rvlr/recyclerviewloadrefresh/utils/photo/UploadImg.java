@@ -34,6 +34,32 @@ import rx.schedulers.Schedulers;
  compile 'id.zelory:compressor:1.0.2'
  */
 public class UploadImg {
+
+
+/*    String imgStr[] = new String[]{"", ""};
+
+    @SuppressLint("HandlerLeak")
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            if (msg.what == 100) {
+                Img img = (Img) msg.obj;
+                if ("5".equals(img.getType())) {
+                    binding.accomplishIV1.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                    Glide.with(AccomplishActivity.this).load(img.getPicPath()).centerCrop().error(R.drawable.actionbar_camera_icon).into(binding.accomplishIV1);
+
+                    imgStr[0] = img.getSrc();
+                } else if ("6".equals(img.getType())) {
+                    binding.accomplishIV2.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                    Glide.with(AccomplishActivity.this).load(img.getPicPath()).centerCrop().error(R.drawable.actionbar_camera_icon).into(binding.accomplishIV2);
+                    imgStr[1] = img.getSrc();
+                }
+            }
+        }
+    };*/
+
+
     private Activity mActivity;
     private Handler mHandler;
     /**

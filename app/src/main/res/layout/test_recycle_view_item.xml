@@ -36,10 +36,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="16dp"
-            android:onClick="@{item.onClick}"
-            android:text="@{item.item,default=PLACEHOLDER}"
-            tools:text="Item 1" />
 
+            android:text="@{item.item}"
+            tools:text="Item 1" />
+        <!--  android:onClick="@{item.onClick}"-->
+<!-- android:text="@{item.item,default=PLACEHOLDER }" 不可以用-->
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
