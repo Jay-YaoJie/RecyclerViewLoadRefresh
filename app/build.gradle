@@ -146,8 +146,7 @@ dependencies {
     //  compile 'com.chanven.lib:cptr:1.0.0'
     //RecyclerView列表的适配器
     compile 'me.tatarka.bindingcollectionadapter:bindingcollectionadapter:1.3.0'
-    //添加这个包就包含了compile 'me.tatarka.bindingcollectionadapter:bindingcollectionadapter:1.3.0'适配器，事件添加
-    //compile 'me.tatarka.bindingcollectionadapter:bindingcollectionadapter-recyclerview:1.3.0'
+    compile 'me.tatarka.bindingcollectionadapter:bindingcollectionadapter-recyclerview:1.3.0'
     //compile 'com.nineoldandroids:library:2.4.0'//// 兼容3.0以前版本的属性动画库,jakewharton大神良心之作
     /*弹出一个加载网络数据进度的提示*/
     compile 'cn.pedant.sweetalert:library:1.3'
