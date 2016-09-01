@@ -161,4 +161,11 @@ dependencies {
 
     //加载本地包
     compile fileTree(include: '*.jar', dir: 'libs')
+	
+	
+	//   Android酷炫实用的开源框架（UI框架）
+	//http://blog.csdn.net/fancylovejava/article/details/45787729
+	
+	
+	
 }
