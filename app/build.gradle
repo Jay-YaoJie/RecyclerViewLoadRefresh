@@ -127,7 +127,7 @@ dependencies {
     //    compile 'com.squareup.retrofit2:retrofit:2.1.0'
     //    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     //    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
-    //retrofit，gson，rxAndroid，rxJava实现 超级网络数据请求
+    //retrofit，gson，rxAndroid，rxJava实现 超级网络数据请求    ///Android Retrofit RxJava实现缓存//http://blog.csdn.net/jdsjlzx/article/details/52108825
     //添加Retrofit2库
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     //在Retrofit2中是用Gson解析的，所以我们要在build.gradle中添加。
