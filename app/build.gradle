@@ -165,7 +165,9 @@ dependencies {
 	
 	//   Android酷炫实用的开源框架（UI框架）
 	//http://blog.csdn.net/fancylovejava/article/details/45787729
-	
+	// //加一个视频播放框架
+    //compile 'fm.jiecao:jiecaovideoplayer:3.6.3'
+    //compile 'fm.jiecao:jiecaovideoplayer:4.6.2'
 	
 	
 }
